@@ -24,7 +24,7 @@ set smartindent "smart code indenting like after a { or [
 set backspace=2
 
 "PERSONAL PREFERENCES
-set nocompatible "better usability
+set nocompatible "add more awesomeness
 set cul " highlight the current line
 set number "show the line numbers
 set nowrap "don't wrap long lines
@@ -54,6 +54,14 @@ let g:syntastic_auto_loc_list=0 "show syntax errors by default on file open
 "CUSTOM MAPPINGS
 noremap <leader>W :w !sudo tee %<CR>
 "nmap <silent> <c-n> :NERDTreeToggle<CR>
+
+" Faster split resizing (+,-)
+if bufwinnr(1)
+  map = <C-W>+
+  map - <C-W>-
+  map _ <C-W><
+  map + <C-W>>
+endif
 
 "Toggle code folding with space
 nnoremap <space> za 
