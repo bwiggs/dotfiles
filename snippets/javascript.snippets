@@ -12,11 +12,21 @@ snippet fun
 # Anonymous Function
 snippet f
 	function(${1}) {${2}};
+# Immediately Invoked Function Expression
+snippet iife
+	(function(${1}){
+		${2}
+	})();
+# new module
+snippet mod
+	var ${1:moduleName} = (function(${2}){
+		${3}
+	})();
 # if
 snippet if
 	if (${1:true}) {${2}}
 # if ... else
-snippet ife
+snippet ifls
 	if (${1:true}) {${2}}
 	else{${3}}
 # tertiary conditional
