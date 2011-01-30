@@ -1,7 +1,7 @@
 "THEME
 set t_Co=256
 set background=dark        " adapt colors for background
-colorscheme neopro    " use this color scheme
+colorscheme molokai    " use this color scheme
 syntax on
 
 "ENCODING
@@ -86,5 +86,4 @@ if has("gui_running")
     set background=dark   " adapt colors for background
     set selectmode=mouse,key,cmd
     set guioptions-=T
-    set transparency=4
 endif
