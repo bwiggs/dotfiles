@@ -1,18 +1,21 @@
 "THEME
 set t_Co=256
 set background=dark        " adapt colors for background
-colorscheme molokai    " use this color scheme
+colorscheme neopro    " use this color scheme
 syntax on
+
+"ENCODING
+set encoding=utf-8
 
 "CHANGE MAPLEADER
 let mapleader=","
 
 "STATUS LINE
 se laststatus=2
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [%p%%]\ [LEN=%L]
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [%p%%]\ [LEN=%L]
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 "TABS & INDENTS
 set tabstop=2 "number of spaces a TAB counts as
@@ -48,12 +51,12 @@ set wildmode=longest:full
 set wildmenu "better command line completion in vim
 
 "PLUGINS SETTINGS
-let g:syntastic_enable_signs=1 "need to enable signs flag for vim when compiling
-let g:syntastic_auto_loc_list=0 "show syntax errors by default on file open
+"let g:syntastic_enable_signs=1 "need to enable signs flag for vim when compiling
+"let g:syntastic_auto_loc_list=1 "show syntax errors by default on file open
 
 "CUSTOM MAPPINGS
 noremap <leader>W :w !sudo tee %<CR>
-"nmap <silent> <c-n> :NERDTreeToggle<CR>
+nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 " Faster split resizing (+,-)
 if bufwinnr(1)
@@ -83,4 +86,5 @@ if has("gui_running")
     set background=dark   " adapt colors for background
     set selectmode=mouse,key,cmd
     set guioptions-=T
+    set transparency=4
 endif
