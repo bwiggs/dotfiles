@@ -1,0 +1,9 @@
+[User]
+  name = Brian Wigginton
+  email = brianwigginton@gmail.com
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
