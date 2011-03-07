@@ -16,6 +16,8 @@ alias tails='tail -f log/development.log'
 alias cdms="cd ~/Sites/moonshine/rails/moonshine/"
 alias cdo='cd ~/Sites/amex/openforum'
 alias cdmamp='cd /Applications/MAMP/'
+alias cdd='cd ~/dotfiles'
+alias cdad='cd /Volumes/amex/openforum/amexdev'
 
 alias ebash='vim ~/.bash_profile'
 alias rebash='. ~/.bash_profile'
@@ -68,10 +70,10 @@ EDITOR=vim;
 ##
 
 # MacPorts Installer addition on 2010-08-19_at_20:05:09: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/Users/brianwigginton/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
+export PATH=/Users/brianwn/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # add the android developer toolkit
-export PATH=/Users/brianwigginton/bin/:/Users/brianwigginton/bin/android-sdk-mac_x86:$PATH
+export PATH=/Users/brianwn/bin/:/Users/brianwn/bin/android-sdk-mac_x86:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
