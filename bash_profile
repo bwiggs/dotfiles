@@ -34,7 +34,7 @@ alias gc='java -jar ~/bin/google-closure-compiler/compiler.jar'
 
 # write a function to compute the current git branch
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \(\1\)/'
 }
 
 # Colors
@@ -53,7 +53,7 @@ ENDCOLOR="\[\e[m\]"
 #export PS1="[ \@ | \h:$WHITE\w$ENDCOLOR] $BLUE\u$ENDCOLOR$ "
 #export PS1="[ $WHITE\w$ENDCOLOR ] $BLUE\u$ENDCOLOR$ "
 #export PS1="$RED($ORANGE\w$RED) $WHITE\u$RED> $ENDCOLOR"
-PS1="$ORANGE\$(parse_git_branch)$GREEN($LIME\w$GREEN) $WHITE\u$LIME> $ENDCOLOR"
+PS1="$GREEN($LIME\w$GREEN)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
 
 export RUBYOPT="rubygems"
 export RDOCOPT="-S -f html -T hanna"
