@@ -3,6 +3,11 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" Local dirs
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+"set undodir=~/.vim/undo
+
 "THEME
 set t_Co=256
 set background=dark        " adapt colors for background

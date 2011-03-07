@@ -8,6 +8,7 @@
   branch = auto
 
 [alias]
+  co = checkout
   st = status
   lp = log --pretty=oneline --abbrev-commit --graph --decorate
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
