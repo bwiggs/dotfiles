@@ -16,6 +16,8 @@ alias tails='tail -f log/development.log'
 alias cdms="cd ~/Sites/moonshine/rails/moonshine/"
 alias cdo='cd ~/Sites/amex/openforum'
 alias cdmamp='cd /Applications/MAMP/'
+alias cdd='cd ~/dotfiles'
+alias cdad='cd /Volumes/amex/openforum/amexdev'
 
 alias ebash='vim ~/.bash_profile'
 alias rebash='. ~/.bash_profile'
