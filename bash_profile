@@ -62,16 +62,15 @@ export JSTESTDRIVER_HOME=~/bin/jstestdriver
 
 EDITOR=vim;
 
-
 ##
 # Your previous /Users/brianwigginton/.bash_profile file was backed up as /Users/brianwigginton/.bash_profile.macports-saved_2010-08-19_at_20:05:09
 ##
 
 # MacPorts Installer addition on 2010-08-19_at_20:05:09: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/Users/brianwigginton/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
+export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # add the android developer toolkit
-export PATH=/Users/brianwigginton/bin/:/Users/brianwigginton/bin/android-sdk-mac_x86:$PATH
+export PATH=~/bin/:~/bin/android-sdk-mac_x86:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
