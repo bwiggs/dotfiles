@@ -14,13 +14,14 @@ alias lld="ll -d */"
 alias tails='tail -f log/development.log'
 
 alias cdms="cd ~/Sites/moonshine/rails/moonshine/"
-alias cdo='cd ~/Sites/amex/openforum'
+alias cda='cd ~/Sites/amex/openforum'
 alias cdmamp='cd /Applications/MAMP/'
 alias cdd='cd ~/dotfiles'
 alias cdad='cd /Volumes/amex/openforum/amexdev'
 
 alias ebash='vim ~/.bash_profile'
 alias rebash='. ~/.bash_profile'
+alias ehosts='sudo mvim /etc/hosts'
 
 alias tmamp='tail -f /Applications/MAMP/logs/*';
 alias tache='tail -f /opt/local/apache2/logs/*';
@@ -30,6 +31,8 @@ alias gvimrc='vim ~/.gvimrc'
 
 alias yuic='java -jar ~/bin/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 alias gc='java -jar ~/bin/google-closure-compiler/compiler.jar'
+
+set completion-ignore-case On
 
 # Use vi key bindings
 #set -o vi
@@ -57,12 +60,14 @@ ENDCOLOR="\[\e[m\]"
 #export PS1="$RED($ORANGE\w$RED) $WHITE\u$RED> $ENDCOLOR"
 PS1="$GREEN($LIME\w$GREEN)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
 
+source ~/bin/git-completion.bash
+
 export RUBYOPT="rubygems"
 export RDOCOPT="-S -f html -T hanna"
 
 export JSTESTDRIVER_HOME=~/bin/jstestdriver
 
-EDITOR=vim;
+EDITOR=/usr/bin/vim;
 
 ##
 # Your previous /Users/brianwigginton/.bash_profile file was backed up as /Users/brianwigginton/.bash_profile.macports-saved_2010-08-19_at_20:05:09
@@ -73,6 +78,6 @@ export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # add the android developer toolkit
-export PATH=~/bin/:~/bin/android-sdk-mac_x86:$PATH
+export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.

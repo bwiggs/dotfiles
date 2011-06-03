@@ -2,14 +2,35 @@
   name = Brian Wigginton
   email = brianwigginton@gmail.com
 
+[core]
+  editor = /usr/bin/vim
+
 [color]
   diff = auto
   status = auto
   branch = auto
 
+[color]
+  ui = auto
+
+[color "branch"]
+  current = green reverse
+  local = green
+  remote = red
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green
+  changed = red
+  untracked = yellow
+
 [alias]
   co = checkout
   st = status
+  branches = branch -a
   lp = log --pretty=oneline --abbrev-commit --graph --decorate
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
