@@ -14,7 +14,7 @@ alias lld="ll -d */"
 alias tails='tail -f log/development.log'
 
 alias cdms="cd ~/Sites/moonshine/rails/moonshine/"
-alias cda='cd ~/Sites/amex/openforum'
+alias cda='cd ~/Sites/amex/openforum/amexdev'
 alias cdmamp='cd /Applications/MAMP/'
 alias cdd='cd ~/dotfiles'
 alias cdad='cd /Volumes/amex/openforum/amexdev'
@@ -79,5 +79,6 @@ export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 
 # add the android developer toolkit
 export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
+export PATH=~/bin/spy:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
