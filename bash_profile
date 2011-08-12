@@ -37,10 +37,6 @@ set completion-ignore-case On
 # Use vi key bindings
 #set -o vi
 
-# write a function to compute the current git branch
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \(\1\)/'
-}
 
 # Colors
 BLACK="\[\e[0;30m\]"
@@ -55,12 +51,22 @@ BROWN="\[\e[0;33m\]"
 WHITE="\[\e[1;37m\]"
 ENDCOLOR="\[\e[m\]"
 
+# parse rvm current status
+parse_rvm_status() {
+  rvm current 2> /dev/null
+}
+
+# write a function to compute the current git branch
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \(\1\)/'
+}
+
 #export PS1="[ \@ | \h:$WHITE\w$ENDCOLOR] $BLUE\u$ENDCOLOR$ "
 #export PS1="[ $WHITE\w$ENDCOLOR ] $BLUE\u$ENDCOLOR$ "
 #export PS1="$RED($ORANGE\w$RED) $WHITE\u$RED> $ENDCOLOR"
+#PS1="$GREEN($LIME\w$GREEN)$RED\$(parse_rvm_status)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
 PS1="$GREEN($LIME\w$GREEN)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
 
-source ~/bin/git-completion.bash
 
 export RUBYOPT="rubygems"
 export RDOCOPT="-S -f html -T hanna"
@@ -68,6 +74,9 @@ export RDOCOPT="-S -f html -T hanna"
 export JSTESTDRIVER_HOME=~/bin/jstestdriver
 
 EDITOR=/usr/bin/vim;
+
+source ~/dotfiles/completion_scripts/git_completion
+complete -C ~/dotfiles/completion_scripts/rake_completion -o default rake
 
 ##
 # Your previous /Users/brianwigginton/.bash_profile file was backed up as /Users/brianwigginton/.bash_profile.macports-saved_2010-08-19_at_20:05:09
