@@ -139,11 +139,11 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 
 
-# Unimpaired configuration
-# Bubble single lines
+" Unimpaired configuration
+" Bubble single lines
 nmap <D-Up> [e
 nmap <D-Down> ]e
-# Bubble multiple lines
+" Bubble multiple lines
 vmap <D-Up> [egv
 vmap <D-Down> ]egv
 

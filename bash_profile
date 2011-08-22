@@ -15,6 +15,7 @@ alias tails='tail -f log/development.log'
 
 alias cdms="cd ~/Sites/moonshine/rails/moonshine/"
 alias cda='cd ~/Sites/amex/openforum/amexdev'
+alias cdq='cd ~/Sites/amex/openforum/amexqa'
 alias cdmamp='cd /Applications/MAMP/'
 alias cdd='cd ~/dotfiles'
 alias cdad='cd /Volumes/amex/openforum/amexdev'
@@ -64,6 +65,8 @@ source ~/bin/git-completion.bash
 
 export RUBYOPT="rubygems"
 export RDOCOPT="-S -f html -T hanna"
+
+source ~/.amazon-s3
 
 export JSTESTDRIVER_HOME=~/bin/jstestdriver
 
