@@ -190,6 +190,9 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete tabstop=8 expa
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html " For SnipMate
+
 
 
 " ON VIMRC SAVE, UPDATE ALL VIM INSTANCES TO USE THE NEW CONFIG FILE
