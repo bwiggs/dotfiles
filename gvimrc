@@ -1,4 +1,4 @@
-set guifont=Monaco:h12
+set guifont=Monaco:h14
 set transparency=4
 
 " Fullscreen
@@ -8,6 +8,4 @@ set fuoptions=maxhorz,maxvert
 macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
 set guioptions-=T
-colorscheme solarized
-
-
+colorscheme wombat

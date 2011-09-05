@@ -91,3 +91,9 @@
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "vim/bundle/vim-jasmine"]
+	path = vim/bundle/vim-jasmine
+	url = https://github.com/thomd/vim-jasmine.git
+[submodule "vim/bundle/vim-colors-wombat"]
+	path = vim/bundle/vim-colors-wombat
+	url = https://github.com/jeffreyiacono/vim-colors-wombat.git
