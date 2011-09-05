@@ -52,3 +52,42 @@
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/pyflakes-vim"]
+	path = vim/bundle/pyflakes-vim
+	url = git://github.com/vim-scripts/pyflakes.vim.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim/bundle/vim-preview"]
+	path = vim/bundle/vim-preview
+	url = https://github.com/greyblake/vim-preview.git
+[submodule "vim/bundle/vim-nosecompiler"]
+	path = vim/bundle/vim-nosecompiler
+	url = https://github.com/olethanh/Vim-nosecompiler.git
+[submodule "vim/bundle/vim-makegreen"]
+	path = vim/bundle/vim-makegreen
+	url = https://github.com/reinh/vim-makegreen.git
+[submodule "vim/bundle/TaskList"]
+	path = vim/bundle/TaskList
+	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule "vim/bundle/pep8"]
+	path = vim/bundle/pep8
+	url = https://github.com/vim-scripts/pep8.git
+[submodule "vim/bundle/pydoc"]
+	path = vim/bundle/pydoc
+	url = https://github.com/fs111/pydoc.vim.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "vim/bundle/git"]
+	path = vim/bundle/git
+	url = https://github.com/tpope/vim-git.git
+[submodule "vim/bundle/vim-unimpaired"]
+	path = vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git

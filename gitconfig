@@ -1,5 +1,5 @@
 [User]
-  name = Brian Wigginton
+	name = Brian Wigginton
   email = brianwigginton@gmail.com
 
 [core]
@@ -36,3 +36,5 @@
   whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
   whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
   
+[branch]
+	autosetupmerge = true
