@@ -48,7 +48,10 @@ set history=1000 " Increase history from 20 default to 1000
 
 "SEARCHING
 set incsearch " Highlight dynamically as pattern is typed.
+set hlsearch "highlight all matched terms
 set wrapscan " Searches wrap around end of file
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 "STATUS LINE
 se laststatus=2
@@ -57,7 +60,7 @@ se statusline=""
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [%p%%]\ [LEN=%L]
 set statusline+=%F%m%r%h%w
 set statusline+=%20.20{'tabstop='.&tabstop}
-set statusline+=%{fugitive#statusline()}
+"set statusline+=%{fugitive#statusline()}
 set statusline+=%=[SYNGROUP=%{synIDattr(synID(line('.'),col('.'),1),'name')}]\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ 
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%#warningmsg#
