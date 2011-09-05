@@ -30,6 +30,7 @@ alias sdock='./System/Library/CoreServices/Dock.app/Contents/MacOS/Dock'
 alias vimrc='vim ~/.vimrc'
 alias gvimrc='vim ~/.gvimrc'
 
+alias jstd='java -jar ~/bin/JsTestDriver-1.3.2.jar'
 alias yuic='java -jar ~/bin/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 alias gc='java -jar ~/bin/google-closure-compiler/compiler.jar'
 
