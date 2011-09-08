@@ -23,6 +23,11 @@ if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 endif
 
+" Pressing < or > will let you indent/unident selected lines
+vnoremap < <gv
+vnoremap > >gv
+set selectmode=
+
 " MAKE IT EASIER TO SCROLL THROUOGH THEMES
 map <silent><F3> :NEXTCOLOR<cr>
 map <silent><F2> :PREVCOLOR<cr>
