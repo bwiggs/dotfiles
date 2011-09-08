@@ -70,7 +70,7 @@ set statusline+=%*
 set tabstop=2 "number of spaces a TAB counts as
 set shiftwidth=2 "number of spaced to use for indenting
 set softtabstop=2 "number of spaces tab counts for while in edit mode
-set expandtab
+set noexpandtab
 set autoindent "copy indent from current line when starting a new line (when using o or O)
 set smartindent "smart code indenting like after a { or [
 set backspace=2
@@ -142,6 +142,7 @@ function! g:ToggleNuMode()
 endfunc
 nnoremap <C-L> :call g:ToggleNuMode()<cr>
 
+nnoremap <leader>w :set list!<cr>
 
 " faster window resizing
 if bufwinnr(1)

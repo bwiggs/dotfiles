@@ -97,3 +97,12 @@
 [submodule "vim/bundle/vim-colors-wombat"]
 	path = vim/bundle/vim-colors-wombat
 	url = https://github.com/jeffreyiacono/vim-colors-wombat.git
+[submodule "vim/bundle/vim-colors-advantage"]
+	path = vim/bundle/vim-colors-advantage
+	url = https://github.com/vim-scripts/advantage.git
+[submodule "vim/bundle/vim-colors-mustang"]
+	path = vim/bundle/vim-colors-mustang
+	url = https://github.com/cschlueter/vim-mustang
+[submodule "vim/bundle/AutoComplPop"]
+	path = vim/bundle/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git
