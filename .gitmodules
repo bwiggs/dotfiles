@@ -13,9 +13,6 @@
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
-[submodule "vim/bundle/jsbeautify"]
-	path = vim/bundle/jsbeautify
-	url = https://github.com/einars/js-beautify.git
 [submodule "vim/bundle/vim-reload"]
 	path = vim/bundle/vim-reload
 	url = https://github.com/xolox/vim-reload.git
@@ -106,3 +103,6 @@
 [submodule "vim/bundle/AutoComplPop"]
 	path = vim/bundle/AutoComplPop
 	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "vim/bundle/delimitMate"]
+	path = vim/bundle/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
