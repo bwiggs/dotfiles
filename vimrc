@@ -12,10 +12,10 @@ set directory=~/.vim/swaps
 let mapleader=","
 
 " theme
-colorscheme molokai    " use this color scheme for terminals
+colorscheme default    " use this color scheme for terminals
 syntax on
 set background=dark        " adapt colors for background
-set t_Co=256
+"set t_Co=256
 
 
 " macvim: shift aarow select
