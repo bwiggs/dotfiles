@@ -1,3 +1,17 @@
+# Global Settings
+set completion-ignore-case On
+
+# Global Variables
+export RUBYOPT="rubygems"
+export RDOCOPT="-S -f html -T hanna"
+export JSTESTDRIVER_HOME=~/bin/jstestdriver
+export EDITOR=/usr/bin/vim;
+
+# Comletion Scripts
+source ~/dotfiles/completion_scripts/git_completion
+complete -C ~/dotfiles/completion_scripts/rake_completion -o default rake
+
+# ls command aliases
 alias ls="ls -G"
 alias ll="ls -lh"
 alias l="ll"
@@ -11,34 +25,32 @@ alias lart="ll -lart"
 alias lsd="ls -d */"
 alias lld="ll -d */"
 
-alias tails='tail -f log/development.log'
-
-alias cdms="cd ~/Sites/moonshine/rails/moonshine/"
-alias cda='cd ~/Sites/amex/openforum/amexdev'
-alias cdq='cd ~/Sites/amex/openforum/amexqa'
+# quick dir changes
 alias cdmamp='cd /Applications/MAMP/'
 alias cdd='cd ~/dotfiles'
-alias cdad='cd /Volumes/amex/openforum/amexdev'
 
+# quick commands
+alias tails='tail -f log/development.log'
 alias ebash='vim ~/.bash_profile'
 alias rebash='. ~/.bash_profile'
 alias ehosts='sudo mvim /etc/hosts'
-
 alias tmamp='tail -f /Applications/MAMP/logs/*';
-alias tache='tail -f /opt/local/apache2/logs/*';
-alias sdock='./System/Library/CoreServices/Dock.app/Contents/MacOS/Dock'
+alias tache='tail -f /var/log/apache2/*';
 alias vimrc='vim ~/.vimrc'
 alias gvimrc='vim ~/.gvimrc'
+alias rmlogs="sudo rm -f /private/var/log/asl/*.asl"
 
-alias jstd='java -jar ~/bin/JsTestDriver-1.3.2.jar'
-alias yuic='java -jar ~/bin/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
-alias gc='java -jar ~/bin/google-closure-compiler/compiler.jar'
+# local machine settings
+local_profile="~/.local_profile"
+if [ -f $local_profile ]; then
+	source $local_profile
+fi
 
-set completion-ignore-case On
-
-# Use vi key bindings
-#set -o vi
-
+# local amazon settings
+amazon_config="~/.amazon-s3"
+if [ -f $amazon_config ]; then
+	source $amazon_config
+fi
 
 # Colors
 BLACK="\[\e[0;30m\]"
@@ -58,42 +70,37 @@ parse_rvm_status() {
   rvm current 2> /dev/null
 }
 
-# write a function to compute the current git branch
+# get the current git branch name
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \(\1\)/'
 }
 
+# Command Prompts
 #export PS1="[ \@ | \h:$WHITE\w$ENDCOLOR] $BLUE\u$ENDCOLOR$ "
 #export PS1="[ $WHITE\w$ENDCOLOR ] $BLUE\u$ENDCOLOR$ "
 #export PS1="$RED($ORANGE\w$RED) $WHITE\u$RED> $ENDCOLOR"
 #PS1="$GREEN($LIME\w$GREEN)$RED\$(parse_rvm_status)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
-PS1="$GREEN($LIME\w$GREEN)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
+#PS1="$GREEN($LIME\w$GREEN)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
+PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE\u@\h$CYAN> $ENDCOLOR"
 
+# PATHs
+export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
+export PATH=~/bin/spy:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=~/Sites/amex/travel_insiders/code/cakephp/lib/Cake/Console:$PATH
 
-export RUBYOPT="rubygems"
-export RDOCOPT="-S -f html -T hanna"
+# NODE_PATH
+export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
-source ~/.amazon-s3
-
-export JSTESTDRIVER_HOME=~/bin/jstestdriver
-
-EDITOR=/usr/bin/vim;
-
-source ~/dotfiles/completion_scripts/git_completion
-complete -C ~/dotfiles/completion_scripts/rake_completion -o default rake
-
-##
-# Your previous /Users/brianwigginton/.bash_profile file was backed up as /Users/brianwigginton/.bash_profile.macports-saved_2010-08-19_at_20:05:09
-##
+################################################################
+# DO NOT EDIT BELOW THIS LINE
+################################################################
 
 # MacPorts Installer addition on 2010-08-19_at_20:05:09: adding an appropriate PATH variable for use with MacPorts.
 export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-# add the android developer toolkit
-export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
-export PATH=~/bin/spy:$PATH
-
+# RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-source ~/dotfiles/python-dev-env.sh
+# source ~/dotfiles/python-dev-env.sh
