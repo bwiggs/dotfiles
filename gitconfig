@@ -1,9 +1,10 @@
 [User]
 	name = Brian Wigginton
-  email = brianwigginton@gmail.com
+	email = brianwigginton@gmail.com
 
 [core]
   editor = /usr/bin/vim
+	excludesfile = /Users/brianwn/.gitignore_global
 
 [color]
   diff = auto
@@ -38,3 +39,9 @@
   
 [branch]
 	autosetupmerge = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
