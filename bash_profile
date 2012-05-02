@@ -41,7 +41,7 @@ alias gvimrc='vim ~/.gvimrc'
 alias rmlogs="sudo rm -f /private/var/log/asl/*.asl"
 
 # local machine settings
-local_profile="~/.local_profile"
+local_profile=~/.local_profile
 if [ -f $local_profile ]; then
 	source $local_profile
 fi
