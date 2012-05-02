@@ -112,3 +112,12 @@
 [submodule "vim/bundle/vim-jade"]
 	path = vim/bundle/vim-jade
 	url = https://github.com/statianzo/vim-jade.git
+[submodule "vim/bundle/vim-conque"]
+	path = vim/bundle/vim-conque
+	url = https://github.com/rson/vim-conque.git
+[submodule "vim/bundle/vim-io"]
+	path = vim/bundle/vim-io
+	url = https://github.com/vim-scripts/Io-programming-language-syntax.git
+[submodule "vim/bundle/vim-github-theme"]
+	path = vim/bundle/vim-github-theme
+	url = https://github.com/ricardovaleriano/vim-github-theme.git
