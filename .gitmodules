@@ -61,9 +61,6 @@
 [submodule "vim/bundle/vim-nosecompiler"]
 	path = vim/bundle/vim-nosecompiler
 	url = https://github.com/olethanh/Vim-nosecompiler.git
-[submodule "vim/bundle/vim-makegreen"]
-	path = vim/bundle/vim-makegreen
-	url = https://github.com/reinh/vim-makegreen.git
 [submodule "vim/bundle/TaskList"]
 	path = vim/bundle/TaskList
 	url = https://github.com/vim-scripts/TaskList.vim.git
