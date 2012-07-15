@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-github-theme"]
 	path = vim/bundle/vim-github-theme
 	url = https://github.com/ricardovaleriano/vim-github-theme.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
