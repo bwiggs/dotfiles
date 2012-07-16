@@ -1,7 +1,9 @@
-"PATHOGEN
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+" Setup Pathogen
+call pathogen#infect()
+"
+"ENABLE FILETYPE PLUGINS
+filetype plugin on
+filetype plugin indent on    " enable loading indent file for filetype
 
 " Local dirs
 set backupdir=~/.vim/backups
@@ -32,10 +34,6 @@ set selectmode=
 map <silent><F3> :NEXTCOLOR<cr>
 map <silent><F2> :PREVCOLOR<cr>
 
-"ENABLE FILETYPE PLUGINS
-filetype plugin on
-filetype plugin indent on    " enable loading indent file for filetype
-filetype indent on
 "ENCODING
 set encoding=utf-8
 
@@ -63,16 +61,16 @@ set wrapscan " Searches wrap around end of file
 
 "STATUS LINE
 se laststatus=2
-se statusline=""
+"se statusline=""
 
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [%p%%]\ [LEN=%L]
-set statusline+=%F%m%r%h%w
-set statusline+=%20.20{'tabstop='.&tabstop}
-"set statusline+=%{fugitive#statusline()}
-set statusline+=%=[SYNGROUP=%{synIDattr(synID(line('.'),col('.'),1),'name')}]\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ 
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%#warningmsg#
-set statusline+=%*
+"set statusline+=%F%m%r%h%w
+"set statusline+=%20.20{'tabstop='.&tabstop}
+""set statusline+=%{fugitive#statusline()}
+"set statusline+=%=[SYNGROUP=%{synIDattr(synID(line('.'),col('.'),1),'name')}]\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ 
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%#warningmsg#
+"set statusline+=%*
 
 "TABS & INDENTS
 set tabstop=2 "number of spaces a TAB counts as
