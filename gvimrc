@@ -8,4 +8,4 @@ set fuoptions=maxhorz,maxvert
 macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
 set guioptions-=T
-colorscheme wombat
+colorscheme jellybeans
