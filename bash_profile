@@ -39,6 +39,8 @@ alias tache='tail -f /var/log/apache2/*';
 alias vimrc='vim ~/.vimrc'
 alias gvimrc='vim ~/.gvimrc'
 alias rmlogs="sudo rm -f /private/var/log/asl/*.asl"
+alias ephp="sudo vim /etc/php.ini"
+alias apr="sudo apachectl restart"
 
 # local machine settings
 local_profile=~/.local_profile
