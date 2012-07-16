@@ -3,7 +3,7 @@ set completion-ignore-case On
 
 # Global Variables
 export RUBYOPT="rubygems"
-export RDOCOPT="-S -f html -T hanna"
+export RDOCOPT="-S -f html"
 export JSTESTDRIVER_HOME=~/bin/jstestdriver
 export EDITOR=/usr/bin/vim;
 
