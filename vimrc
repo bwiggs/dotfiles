@@ -35,7 +35,7 @@ map <silent><F2> :PREVCOLOR<cr>
 "ENABLE FILETYPE PLUGINS
 filetype plugin on
 filetype plugin indent on    " enable loading indent file for filetype
-
+filetype indent on
 "ENCODING
 set encoding=utf-8
 
@@ -50,6 +50,8 @@ set ttyfast "faster terminal interactions
 set showmode "always show the file tabs at the top
 set vb t_vb= "use flash instead of beep
 set history=1000 " Increase history from 20 default to 1000
+set fdc=5
+set showcmd
 
 "SEARCHING
 set incsearch " Highlight dynamically as pattern is typed.
@@ -100,6 +102,9 @@ set wildignore+=.swf,*.pdf,*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.
 "highlight BadWhitespace term=standout ctermbg=red guibg=red
 "match BadWhitespace /[^* \t]\zs\s\+$\| \+\ze\t/
 
+" Make Y act like other capitals
+map Y y$
+
 " switch between light and dark background
 map <leader>b :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
@@ -117,7 +122,7 @@ let g:SuperTabDefaultCompletionType = "context"
 noremap <leader>W :w !sudo tee %<CR>
 "map <leader>v :sp ~/.vimrc<cr> " edit my .vimrc file in a split
 map <leader>e :e ~/.vimrc<cr>      " edit my .vimrc file
-"map <leader>eg :e ~/.gvimrc<cr>      " edit my .vimrc file
+map <leader>E :e ~/.gvimrc<cr>      " edit my .gvimrc file
 "map <leader>so :source ~/.vimrc<cr> " update the system settings from my vimrc file
 
 " show errors in the current file
@@ -152,7 +157,7 @@ function! g:ToggleNuMode()
 endfunc
 nnoremap <leader>l :call g:ToggleNuMode()<cr>
 
-"nnoremap <leader>w :set list!<cr>
+nnoremap <leader>w :set list!<cr>
 
 " faster window resizing
 if bufwinnr(1)
@@ -258,4 +263,6 @@ nmap <D-/> <leader>ci <CR>
 vmap <D-/> <leader>ci <CR>
 imap <D-/> <C-O><leader>ci
 
+let g:svndiff_autoupdate = 1
 
+nnoremap <leader>rt :set noet|retab!
