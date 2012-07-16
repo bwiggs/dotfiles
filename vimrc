@@ -160,12 +160,12 @@ nnoremap <leader>l :call g:ToggleNuMode()<cr>
 nnoremap <leader>w :set list!<cr>
 
 " faster window resizing
-if bufwinnr(1)
-  map = <C-W>+
-  map - <C-W>-
-  map _ <C-W><
-  map + <C-W>>
-endif
+"if bufwinnr(1)
+  "map = <C-W>+
+  "map - <C-W>-
+  "map _ <C-W><
+  "map + <C-W>>
+"endif
 
 " REMAP KEYS FOR AUTO-COMPLETION, DISABLE ARROW KEYS
 "inoremap <expr>  <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
