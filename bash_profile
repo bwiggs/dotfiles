@@ -89,11 +89,9 @@ PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE\u@\h$CYAN> $ENDCOLOR"
 export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
 export PATH=~/bin/spy:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=~/Sites/amex/travel_insiders/code/cakephp/lib/Cake/Console:$PATH
-
-# NODE_PATH
-export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
-
+export PATH=~/Sites/amex/travel_insiders/code/repo/www/lib/Cake/Console:$PATH
+export PATH="$PATH"
+export NODE_PATH="~/node_modules:/usr/local/lib/node_modules:/usr/local/bin/"
 ################################################################
 # DO NOT EDIT BELOW THIS LINE
 ################################################################
