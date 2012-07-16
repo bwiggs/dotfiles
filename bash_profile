@@ -83,7 +83,7 @@ parse_git_branch() {
 #export PS1="$RED($ORANGE\w$RED) $WHITE\u$RED> $ENDCOLOR"
 #PS1="$GREEN($LIME\w$GREEN)$RED\$(parse_rvm_status)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
 #PS1="$GREEN($LIME\w$GREEN)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
-PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE\u@\h$CYAN> $ENDCOLOR"
+PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE>$ENDCOLOR "
 
 # PATHs
 export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
