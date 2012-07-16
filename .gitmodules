@@ -121,3 +121,12 @@
 [submodule "vim/bundle/vim-github-theme"]
 	path = vim/bundle/vim-github-theme
 	url = https://github.com/ricardovaleriano/vim-github-theme.git
+[submodule "vim/bundle/vim-colors-jellybeans"]
+	path = vim/bundle/vim-colors-jellybeans
+	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "vim/bundle/vim-svndiff"]
+	path = vim/bundle/vim-svndiff
+	url = https://github.com/laurentb/vim-svndiff.git
+[submodule "vim/bundle/MatchTag"]
+	path = vim/bundle/MatchTag
+	url = https://github.com/gregsexton/MatchTag.git
