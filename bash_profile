@@ -86,7 +86,7 @@ parse_git_branch() {
 PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE>$ENDCOLOR "
 
 # PATHs
-export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
+export PATH=~/bin:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools:$PATH
 export PATH=~/bin/spy:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=~/Sites/amex/travel_insiders/code/repo/www/lib/Cake/Console:$PATH
