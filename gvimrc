@@ -1,4 +1,4 @@
-set guifont=Monaco:h12
+set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h12
 set transparency=4
 
 " Fullscreen
