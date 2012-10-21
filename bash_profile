@@ -92,6 +92,7 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=~/Sites/amex/travel_insiders/code/repo/www/lib/Cake/Console:$PATH
 export PATH="$PATH"
 export NODE_PATH="~/node_modules:/usr/local/lib/node_modules:/usr/local/bin/"
+export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 ################################################################
 # DO NOT EDIT BELOW THIS LINE
 ################################################################
@@ -102,5 +103,8 @@ export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+# pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 # source ~/dotfiles/python-dev-env.sh
