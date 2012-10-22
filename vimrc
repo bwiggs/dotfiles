@@ -38,6 +38,7 @@ map <silent><F2> :PREVCOLOR<cr>
 set encoding=utf-8
 
 "PERSONAL PREFERENCES
+se autochdir
 set nocompatible "add more awesomeness
 set cul " highlight the current line
 set number "show the line numbers
@@ -207,6 +208,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
+autocmd FileType php set tabstop=4 shiftwidth=4
 
 " tagbar plugin
 let g:tagbar_usearrows = 1

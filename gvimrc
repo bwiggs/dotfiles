@@ -1,5 +1,5 @@
 set guifont=Monaco:h12
-set transparency=4
+"set transparency=4
 
 " Fullscreen
 set fuoptions=maxhorz,maxvert
