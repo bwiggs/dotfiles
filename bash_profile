@@ -88,11 +88,12 @@ parse_git_branch() {
 PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE\u$BLUE>$ENDCOLOR "
 
 # PATHs
-export PATH=~/bin/:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools/:$PATH
+export PATH=~/bin:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools:$PATH
 export PATH=~/bin/spy:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$PATH"
 export NODE_PATH="~/node_modules:/usr/local/lib/node_modules:/usr/local/bin/"
+export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 ################################################################
 # DO NOT EDIT BELOW THIS LINE
 ################################################################
@@ -103,6 +104,9 @@ export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+# pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 # source ~/dotfiles/python-dev-env.sh
 

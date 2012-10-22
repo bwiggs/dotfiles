@@ -266,3 +266,8 @@ imap <D-/> <C-O><leader>ci
 let g:svndiff_autoupdate = 1
 
 nnoremap <leader>rt :set noet|retab!
+
+let g:Powerline_symbols = 'fancy'
+
+let g:dbgPavimPort = 9009
+let g:dbgPavimBreakAtEntry = 0

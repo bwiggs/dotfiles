@@ -136,3 +136,6 @@
 [submodule "vim/bundle/piv"]
 	path = vim/bundle/piv
 	url = https://github.com/spf13/PIV.git
+[submodule "vim/bundle/DBGPavim"]
+	path = vim/bundle/DBGPavim
+	url = https://github.com/brookhong/DBGPavim.git
