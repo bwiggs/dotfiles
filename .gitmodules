@@ -133,3 +133,9 @@
 [submodule "vim/bundle/DBGPavim"]
 	path = vim/bundle/DBGPavim
 	url = https://github.com/brookhong/DBGPavim.git
+[submodule "vim/bundle/vim-node"]
+	path = vim/bundle/vim-node
+	url = https://github.com/guileen/vim-node.git
+[submodule "vim/bundle/vim-nodejs-complete"]
+	path = vim/bundle/vim-nodejs-complete
+	url = https://github.com/myhere/vim-nodejs-complete.git
