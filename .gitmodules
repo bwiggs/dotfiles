@@ -130,6 +130,12 @@
 [submodule "vim/bundle/vim-powerline"]
 	path = vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/bundle/vim-golang"]
+	path = vim/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "vim/bundle/piv"]
+	path = vim/bundle/piv
+	url = https://github.com/spf13/PIV.git
 [submodule "vim/bundle/DBGPavim"]
 	path = vim/bundle/DBGPavim
 	url = https://github.com/brookhong/DBGPavim.git

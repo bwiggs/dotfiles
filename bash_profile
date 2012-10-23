@@ -41,6 +41,7 @@ alias gvimrc='vim ~/.gvimrc'
 alias rmlogs="sudo rm -f /private/var/log/asl/*.asl"
 alias ephp="sudo vim /etc/php.ini"
 alias apr="sudo apachectl restart"
+alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # local machine settings
 local_profile=~/.local_profile
@@ -83,13 +84,13 @@ parse_git_branch() {
 #export PS1="$RED($ORANGE\w$RED) $WHITE\u$RED> $ENDCOLOR"
 #PS1="$GREEN($LIME\w$GREEN)$RED\$(parse_rvm_status)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
 #PS1="$GREEN($LIME\w$GREEN)$PURPLE\$(parse_git_branch) $WHITE\u$GREEN> $ENDCOLOR"
-PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE>$ENDCOLOR "
+#PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE>$ENDCOLOR "
+PS1="$BLUE($CYAN\w$BLUE)\$(parse_git_branch) $WHITE\u$BLUE>$ENDCOLOR "
 
 # PATHs
 export PATH=~/bin:~/bin/android-sdk-mac_x86:~/bin/android-sdk-mac_x86/platform-tools:$PATH
 export PATH=~/bin/spy:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=~/Sites/amex/travel_insiders/code/repo/www/lib/Cake/Console:$PATH
 export PATH="$PATH"
 export NODE_PATH="~/node_modules:/usr/local/lib/node_modules:/usr/local/bin/"
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
@@ -108,3 +109,5 @@ export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 # source ~/dotfiles/python-dev-env.sh
+
+export HISTFILESIZE=3000
