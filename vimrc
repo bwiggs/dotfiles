@@ -208,7 +208,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
-autocmd FileType php set tabstop=4 shiftwidth=4
+autocmd FileType php set tabstop=4 shiftwidth=4 noexpandtab
 
 " tagbar plugin
 let g:tagbar_usearrows = 1
@@ -271,3 +271,11 @@ let g:Powerline_symbols = 'fancy'
 
 let g:dbgPavimPort = 9009
 let g:dbgPavimBreakAtEntry = 0
+
+" TODO: FIX THIS!
+let g:jellybeans_overrides = {
+\    'Todo': { 'guifg': '303030', 'guibg': 'f0f000',
+\              'ctermfg': 'Black', 'ctermbg': 'Yellow',
+\              'attr': 'bold' },
+\    'CursorLine': { 'guibg': '2a2a2a' }
+\}
