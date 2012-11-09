@@ -269,6 +269,8 @@ nnoremap <leader>rt :set noet|retab!
 
 let g:Powerline_symbols = 'fancy'
 
+let g:DisableAutoPHPFolding = 1 
+
 let g:dbgPavimPort = 9009
 let g:dbgPavimBreakAtEntry = 0
 
@@ -279,3 +281,13 @@ let g:jellybeans_overrides = {
 \              'attr': 'bold' },
 \    'CursorLine': { 'guibg': '2a2a2a' }
 \}
+
+" Show syntax highlighting groups for word under cursor
+nmap <leader>z :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
