@@ -105,3 +105,5 @@ fi
 unsetopt correct_all
 
 source ~/.commonrc
+
+source ~/.local_profile

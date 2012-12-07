@@ -4,7 +4,7 @@
 
 [core]
   editor = /usr/bin/vim
-	excludesfile = /Users/brianwn/.gitignore_global
+	excludesfile = /Users/brianwigginton/.gitignore_global
 
 [color]
   diff = auto
