@@ -148,3 +148,6 @@
 [submodule "vim/bundle/vim-twig"]
 	path = vim/bundle/vim-twig
 	url = https://github.com/beyondwords/vim-twig.git
+[submodule "vim/bundle/neocomplcache"]
+	path = vim/bundle/neocomplcache
+	url = https://github.com/Shougo/neocomplcache.git
