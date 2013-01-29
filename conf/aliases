@@ -1,2 +1,7 @@
 alias pel="grc tail -f /var/log/apache2/error_log"
 alias pal="grc tail -f /var/log/apache2/access_log"
+alias jenkins="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
+alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+alias evimrc="vim ~/.vimrc"
+alias egvimrc="vim ~/.gvimrc"
+alias openports="lsof -i -P | grep LISTEN"
