@@ -5,3 +5,5 @@ alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSi
 alias evimrc="vim ~/.vimrc"
 alias egvimrc="vim ~/.gvimrc"
 alias openports="lsof -i -P | grep LISTEN"
+
+alias cdd="cd ~/dotfiles"
