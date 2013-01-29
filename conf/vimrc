@@ -1,6 +1,44 @@
-" Setup Pathogen
-call pathogen#infect()
-"
+set nocompatible
+filetype off
+
+"===========================================
+" Vundle
+"===========================================
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'ctrlp.vim'
+Bundle "Lokaltog/vim-powerline"
+Bundle "mileszs/ack.vim"
+Bundle 'The-NERD-tree'
+Bundle 'The-NERD-Commenter'
+Bundle 'neocomplcache'
+Bundle 'mutewinter/vim-indent-guides'
+
+Bundle 'Tagbar'
+Bundle 'Syntastic'
+Bundle 'jshint.vim'
+
+" Language Support
+Bundle "pangloss/vim-javascript"
+Bundle 'html5.vim'
+Bundle 'haproxy'
+
+" Colorschemes
+Bundle 'ScrollColors'
+Bundle 'jellybeans.vim'
+Bundle 'github-theme'
+Bundle "chriskempson/vim-tomorrow-theme"
+
+"===========================================
+" Configs
+"===========================================
+
 "ENABLE FILETYPE PLUGINS
 filetype plugin on
 filetype plugin indent on    " enable loading indent file for filetype
