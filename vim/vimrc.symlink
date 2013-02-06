@@ -17,11 +17,10 @@ Bundle "Lokaltog/vim-powerline"
 Bundle "mileszs/ack.vim"
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
-Bundle 'neocomplcache'
 Bundle 'mutewinter/vim-indent-guides'
 Bundle 'rson/vim-conque'
-Bundle 'skwp/vim-ruby-conque'
 Bundle 'fugitive.vim'
+Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'astashov/vim-ruby-debugger'
 
 Bundle 'Tagbar'
@@ -29,11 +28,16 @@ Bundle 'Syntastic'
 Bundle 'jshint.vim'
 Bundle 'endwise.vim'
 
+" Code Completion
+Bundle 'Valloric/YouCompleteMe'
+"Bundle 'neocomplcache'
+
 " Language Support
 Bundle "pangloss/vim-javascript"
 Bundle 'html5.vim'
 Bundle 'haproxy'
 Bundle 'ruby.vim'
+Bundle 'skwp/vim-ruby-conque'
 
 " Colorschemes
 Bundle 'ScrollColors'
@@ -347,7 +351,7 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_enable_at_startup = 1
 
 " vim-ruby-conque
 " https://github.com/skwp/vim-ruby-conque
