@@ -5,6 +5,7 @@
 [core]
   editor = /usr/bin/vim
 	excludesfile = /Users/brianwigginton/.gitignore_global
+	ignorecase = false
 
 [color]
   diff = auto
