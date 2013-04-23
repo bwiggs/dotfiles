@@ -1,4 +1,5 @@
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h14
+set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h12
+"set guifont=Menlo\ for\ Powerline:h14
 
 " Fullscreen
 set fuoptions=maxhorz,maxvert
@@ -8,3 +9,4 @@ macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
 set guioptions-=T
 colorscheme jellybeans
+set transparency=5

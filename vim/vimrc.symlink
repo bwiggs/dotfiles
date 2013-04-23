@@ -12,6 +12,9 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+" For the insane!
+Bundle 'wikitopian/hardmode'
+
 Bundle 'ctrlp.vim'
 Bundle "Lokaltog/vim-powerline"
 Bundle "mileszs/ack.vim"
@@ -22,6 +25,10 @@ Bundle 'rson/vim-conque'
 Bundle 'fugitive.vim'
 Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'astashov/vim-ruby-debugger'
+Bundle 'tpope/vim-fugitive'
+"Bundle 'tomtom/quickfixsigns_vim' THIS IS SLOW
+Bundle 'tpope/vim-surround'
+"Bundle 'airblade/vim-gitgutter' THIS IS SLOW
 
 Bundle 'Tagbar'
 Bundle 'Syntastic'
@@ -34,10 +41,14 @@ Bundle 'Valloric/YouCompleteMe'
 
 " Language Support
 Bundle "pangloss/vim-javascript"
+Bundle 'digitaltoad/vim-jade'
 Bundle 'html5.vim'
 Bundle 'haproxy'
 Bundle 'ruby.vim'
 Bundle 'skwp/vim-ruby-conque'
+Bundle 'slim-template/vim-slim'
+Bundle 'tpope/vim-rails'
+Bundle 'beyondwords/vim-twig'
 
 " Colorschemes
 Bundle 'ScrollColors'
@@ -75,6 +86,12 @@ if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 endif
 
+" use colon instead of semicolon for command line access
+nmap ; :
+
+" remap the escape key
+:imap jj <Esc>
+
 " Pressing < or > will let you indent/unident selected lines
 vnoremap < <gv
 vnoremap > >gv
@@ -98,8 +115,9 @@ set ttyfast "faster terminal interactions
 set showmode "always show the file tabs at the top
 set vb t_vb= "use flash instead of beep
 set history=1000 " Increase history from 20 default to 1000
-set fdc=5
+"set fdc=5
 set showcmd
+set showbreak=>>>
 
 "SEARCHING
 set incsearch " Highlight dynamically as pattern is typed.
@@ -261,14 +279,19 @@ nnoremap <silent> <leader>i :set nolist!<CR>
 
 " autocomplete for file types
 autocmd BufNewFile,BufRead *.py compiler nose
+autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 colorcolumn=79
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete tabstop=8 expandtab shiftwidth=4 softtabstop=4 colorcolumn=79
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS noexpandtab shiftwidth=2 softtabstop=2
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType php set tabstop=4 shiftwidth=4 noexpandtab
 autocmd BufRead,BufNewFile haproxy* set ft=haproxy
+
+" Hardcore mode plugin!
+"autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " tagbar plugin
 let g:tagbar_usearrows = 1
@@ -373,3 +396,22 @@ nmap <silent> <D-L> :call RunRspecCurrentLineConque()<CR>
 nmap <silent> ,<D-R> :call RunLastConqueCommand()<CR>
 
 "let g:ruby_debugger_progname = 'mvim'
+
+" ---------------
+" Write Buffer
+"
+" Writes the current buffer unless we're the in QuickFix mode.
+" ---------------
+
+function WriteBuffer()
+  if &filetype == "qf"
+    execute "normal! \<enter>"
+  else
+    :write
+  endif
+endfunction
+
+noremap <silent> <enter> :call WriteBuffer()<CR>
+
+" Search and replace word under cursor
+nnoremap <leader>sr :%s/\<<C-r><C-w>\>//g<Left><Left>
