@@ -1,2 +1,11 @@
 --type-set
 twig=.twig
+
+--type-set
+sass=.scss
+
+--type-set
+tpl=.tpl
+
+--type-set
+slim=.slim
