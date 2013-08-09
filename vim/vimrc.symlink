@@ -36,8 +36,8 @@ Bundle 'jshint.vim'
 Bundle 'endwise.vim'
 
 " Code Completion
-Bundle 'Valloric/YouCompleteMe'
-"Bundle 'neocomplcache'
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'neocomplcache'
 
 " Language Support
 Bundle "pangloss/vim-javascript"
@@ -49,6 +49,7 @@ Bundle 'skwp/vim-ruby-conque'
 Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-rails'
 Bundle 'beyondwords/vim-twig'
+Bundle 'muz/vim-gemfile'
 
 " Colorschemes
 Bundle 'ScrollColors'
