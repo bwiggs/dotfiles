@@ -1,8 +1,0 @@
-set show-date = relative
-#set show-line-numbers = yes
-#set author-width = 10
-#set show-refs = false
-set show-id = true
-set show-changes = true
-
-bind main space enter
