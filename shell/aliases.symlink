@@ -10,3 +10,5 @@ alias openports="lsof -i -P | grep LISTEN"
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
 
+# sudo easy_install Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
