@@ -11,4 +11,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
+# Go
+export GOPATH=~/.go
+PATH=$PATH:~/.go/bin
+
 source ~/.aliases
