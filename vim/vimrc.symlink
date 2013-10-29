@@ -58,6 +58,7 @@ Bundle 'github-theme'
 Bundle "chriskempson/vim-tomorrow-theme"
 Bundle "altercation/vim-colors-solarized"
 Bundle "chriskempson/base16-vim"
+Bundle "w0ng/vim-hybrid"
 
 "===========================================
 " Configs
