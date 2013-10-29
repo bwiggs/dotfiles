@@ -8,5 +8,5 @@ set fuoptions=maxhorz,maxvert
 macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
 set guioptions-=T
-colorscheme jellybeans
-set transparency=5
+colorscheme hybrid
+"set transparency=4
