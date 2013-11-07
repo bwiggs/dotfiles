@@ -28,6 +28,7 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'tomtom/quickfixsigns_vim' THIS IS SLOW
 Bundle 'tpope/vim-surround'
 "Bundle 'airblade/vim-gitgutter' THIS IS SLOW
+Bundle 'editorconfig/editorconfig-vim'
 
 Bundle 'Tagbar'
 Bundle 'Syntastic'
