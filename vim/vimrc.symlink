@@ -38,6 +38,7 @@ Bundle 'endwise.vim'
 " Code Completion
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'neocomplcache'
+Bundle 'tristen/vim-sparkup'
 
 " Language Support
 Bundle "pangloss/vim-javascript"
@@ -50,6 +51,8 @@ Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-rails'
 Bundle 'beyondwords/vim-twig'
 Bundle 'muz/vim-gemfile'
+Bundle 'tclem/vim-arduino'
+Bundle "sudar/vim-arduino-syntax"
 
 " Colorschemes
 Bundle 'ScrollColors'
@@ -167,8 +170,8 @@ set wildmenu "better command line completion in vim
 set wildignore+=.swf,*.pdf,*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js,smarty,vendor,node_libraries,node_modules,node_modules.git,.hg,.svn,.sass-cache,log,tmp,build,**/ckeditor/**,**/ckfinder/**
 
 " highlight end of line whitespace
-"highlight BadWhitespace term=standout ctermbg=red guibg=red
-"match BadWhitespace /[^* \t]\zs\s\+$\| \+\ze\t/
+highlight BadWhitespace term=standout ctermbg=red guibg=red
+match BadWhitespace /[^* \t]\zs\s\+$\| \+\ze\t/
 
 " Make Y act like other capitals
 map Y y$
