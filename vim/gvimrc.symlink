@@ -9,4 +9,4 @@ macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
 set guioptions-=T
 colorscheme hybrid
-"set transparency=4
+set transparency=4
