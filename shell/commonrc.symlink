@@ -2,10 +2,18 @@
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 #
 # Ruby - rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export RBENV_ROOT="${HOME}/.rbenv"
+
+if [ -d "${RBENV_ROOT}" ]; then
+	export PATH="${RBENV_ROOT}/bin:${PATH}"
+	eval "$(rbenv init -)"
+fi
 
 # Python - pythonbrew
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc" ]
+
+# Python/HomeBrew - brew-pip support
+export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 
 # Python - virtualenv
 #export WORKON_HOME=~/.virtualenvs
