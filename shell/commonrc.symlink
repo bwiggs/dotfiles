@@ -8,8 +8,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc" ]
 
 # Python - virtualenv
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=~/.virtualenvs
+#source /usr/local/bin/virtualenvwrapper.sh
 
 # Go
 export GOPATH=~/.go
