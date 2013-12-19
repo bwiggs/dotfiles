@@ -15,13 +15,14 @@ Bundle 'gmarik/vundle'
 " For the insane!
 Bundle 'wikitopian/hardmode'
 
+"Bundle 'Shougo/unite.vim'
 Bundle 'ctrlp.vim'
 Bundle "Lokaltog/vim-powerline"
+Bundle 'rking/ag.vim'
 Bundle "mileszs/ack.vim"
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
-Bundle 'mutewinter/vim-indent-guides'
-Bundle 'fugitive.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'astashov/vim-ruby-debugger'
 Bundle 'tpope/vim-fugitive'
@@ -29,6 +30,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 "Bundle 'airblade/vim-gitgutter' THIS IS SLOW
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'Keithbsmiley/investigate.vim'
 
 Bundle 'Tagbar'
 Bundle 'Syntastic'
@@ -183,15 +185,22 @@ map <leader>b :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 " SYNTASTIC =============================
 
 let g:syntastic_check_on_open=0
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
+"let g:syntastic_error_symbol='✗'
+"let g:syntastic_warning_symbol='⚠'
+let g:syntastic_error_symbol = '✗✗'
+let g:syntastic_style_error_symbol = '✠✠'
+let g:syntastic_warning_symbol = '∆∆'
+let g:syntastic_style_warning_symbol = '≈≈'
 let g:syntastic_auto_loc_list=1
 
 " Toggle syntax checking
 nnoremap <leader>s :SyntasticToggleMode<cr>
 
 " Syntastic should be explicitly run
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': [] }
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 0
 
 " PYFLAKES ==============================
 "let g:pyflakes_use_quickfix = 0
@@ -223,7 +232,10 @@ nmap <leader>N :NERDTreeFind<CR>
 map <leader>td <Plug>TaskList
 
 " vim-ack
-nmap <leader>a <Esc>:Ack!
+"nmap <leader>a <Esc>:Ack!
+
+" Ag  a.k.s. The Silver Surfer!
+nmap <leader>a <Esc>:Ag! 
 
 " indent entire block
 "nnoremap <leader>] >i{<CR>
@@ -346,13 +358,24 @@ nnoremap <leader>cc :ConqueTermSplit bash -l<CR>
 " Highlight word at cursor without changing position
 "nnoremap <leader>h *<C-O>
 " Highlight word at cursor and then Ack it.
-"nnoremap <leader>H *<C-O>:AckFromSearch!<CR>
+nnoremap <leader>H *<C-O>:AckFromSearch!<CR>
 
 nmap <D-/> <leader>ci <CR>
 vmap <D-/> <leader>ci <CR>
 imap <D-/> <C-O><leader>ci
 
+" ctrlp 
+let g:ctrlp_map = '<c-p>'
 let g:ctrlp_show_hidden = 1
+
+" Unite
+"let g:unite_source_history_yank_enable = 1
+"nnoremap <c-p> :Unite file<cr>
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
+"nnoremap <space>/ :Unite grep:.<cr>
+"nnoremap <space>y :Unite history/yank<cr>
+"nnoremap <space>s :Unite -quick-match buffer<cr>
 
 let g:svndiff_autoupdate = 1
 
