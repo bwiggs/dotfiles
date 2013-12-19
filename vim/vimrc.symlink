@@ -53,6 +53,7 @@ Bundle 'beyondwords/vim-twig'
 Bundle 'muz/vim-gemfile'
 Bundle 'tclem/vim-arduino'
 Bundle "sudar/vim-arduino-syntax"
+Bundle "marijnh/tern_for_vim"
 
 " Colorschemes
 Bundle 'ScrollColors'
