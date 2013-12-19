@@ -351,6 +351,8 @@ nmap <D-/> <leader>ci <CR>
 vmap <D-/> <leader>ci <CR>
 imap <D-/> <C-O><leader>ci
 
+let g:ctrlp_show_hidden = 1
+
 let g:svndiff_autoupdate = 1
 
 nnoremap <leader>rt :set noet|retab!
