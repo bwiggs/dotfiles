@@ -22,7 +22,7 @@ alias cdp="cd ~/Projects"
 alias c='pygmentize -O style=monokai -f console256 -g'
 
 alias dnet="traceroute 8.8.8.8"
-alias xip="wget -qO- http://ipecho.net/plain ; echo"
+alias checkip="wget -qO- http://icanhazip.com"
 alias nv="nodenv"
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
