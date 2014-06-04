@@ -1,5 +1,8 @@
 #!/bin/bash
 
+alias v="vim"
+alias gv="mvim"
+alias g="git"
 alias pel="grc tail -f /var/log/apache2/error_log"
 alias pal="grc tail -f /var/log/apache2/access_log"
 alias jenkins="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
@@ -21,8 +24,22 @@ alias cdp="cd ~/Projects"
 # sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
 
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+#alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
 alias dnet="traceroute 8.8.8.8"
-alias checkip="wget -qO- http://icanhazip.com"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# One of @janmoesen’s ProTip™s
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+	alias "$method"="lwp-request -m '$method'"
+done
+
 alias nv="nodenv"
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
