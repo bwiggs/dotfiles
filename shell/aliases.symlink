@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias pel="grc tail -f /var/log/apache2/error_log"
 alias pal="grc tail -f /var/log/apache2/access_log"
 alias jenkins="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
@@ -6,6 +8,12 @@ alias evimrc="vim ~/.vimrc"
 alias egvimrc="vim ~/.gvimrc"
 alias sshconf="vim ~/.ssh/config"
 alias openports="lsof -i -P | grep LISTEN"
+alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+alias rtl='tail -f log/development.log'
+alias bi="bundle install"
+alias srails="bundle exec rails server"
+alias be="bundle exec "
+alias beers="bundle exec rails server"
 
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
@@ -14,6 +22,9 @@ alias cdp="cd ~/Projects"
 alias c='pygmentize -O style=monokai -f console256 -g'
 
 alias dnet="traceroute 8.8.8.8"
+alias xip="wget -qO- http://ipecho.net/plain ; echo"
+alias nv="nodenv"
+alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
 # Extract archives - use: extract <file>
 # Based on http://dotfiles.org/~pseup/.bashrc
