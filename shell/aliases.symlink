@@ -3,33 +3,30 @@
 alias v="vim"
 alias gv="mvim"
 alias g="git"
-alias pel="grc tail -f /var/log/apache2/error_log"
-alias pal="grc tail -f /var/log/apache2/access_log"
-alias jenkins="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
-alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
+# commonn quick configs
 alias evimrc="vim ~/.vimrc"
 alias egvimrc="vim ~/.gvimrc"
 alias sshconf="vim ~/.ssh/config"
-alias openports="lsof -i -P | grep LISTEN"
 alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
-alias rtl='tail -f log/development.log'
-alias bi="bundle install"
-alias srails="bundle exec rails server"
-alias be="bundle exec "
-alias beers="bundle exec rails server"
 
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
 
-# sudo easy_install Pygments
+# launch the iphone simulator
+# wish I had this for android also
+alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
+# Cat with syntax highlighting!
+# be sure to sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
 
-# IP addresses
+# Network stuff
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 #alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-
 alias dnet="traceroute 8.8.8.8"
+alias openports="lsof -i -P | grep LISTEN"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -40,48 +37,13 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
 
+# Node Stuff
 alias nv="nodenv"
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
-# Extract archives - use: extract <file>
-# Based on http://dotfiles.org/~pseup/.bashrc
-function extract() {
-	if [ -f "$1" ] ; then
-		local filename=$(basename "$1")
-		local foldername="${filename%%.*}"
-		local fullpath=`perl -e 'use Cwd "abs_path";print abs_path(shift)' "$1"`
-		local didfolderexist=false
-		if [ -d "$foldername" ]; then
-			didfolderexist=true
-			read -p "$foldername already exists, do you want to overwrite it? (y/n) " -n 1
-			echo
-			if [[ $REPLY =~ ^[Nn]$ ]]; then
-				return
-			fi
-		fi
-		mkdir -p "$foldername" && cd "$foldername"
-		case $1 in
-			*.tar.bz2) tar xjf "$fullpath" ;;
-			*.tar.gz) tar xzf "$fullpath" ;;
-			*.tar.xz) tar Jxvf "$fullpath" ;;
-			*.tar.Z) tar xzf "$fullpath" ;;
-			*.tar) tar xf "$fullpath" ;;
-			*.taz) tar xzf "$fullpath" ;;
-			*.tb2) tar xjf "$fullpath" ;;
-			*.tbz) tar xjf "$fullpath" ;;
-			*.tbz2) tar xjf "$fullpath" ;;
-			*.tgz) tar xzf "$fullpath" ;;
-			*.txz) tar Jxvf "$fullpath" ;;
-			*.zip) unzip "$fullpath" ;;
-			*) echo "'$1' cannot be extracted via extract()" && cd .. && ! $didfolderexist && rm -r "$foldername" ;;
-		esac
-	else
-		echo "'$1' is not a valid file"
-	fi
-}
-
-function genpasswd() {
-	let passwordLength=${1:-48}
-	openssl rand -base64 $passwordLength | cut -c 1-$passwordLength
-}
+# Ruby Stuff
+alias be="bundle exec "
+alias beers="bundle exec rails server"
+alias bi="bundle install"
+alias rtl='tail -f log/development.log'
 
