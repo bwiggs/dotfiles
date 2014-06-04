@@ -46,8 +46,9 @@ Bundle 'tristen/vim-sparkup'
 Bundle "pangloss/vim-javascript"
 Bundle "kchmck/vim-coffee-script"
 Bundle 'digitaltoad/vim-jade'
-Bundle 'html5.vim'
+Bundle 'othree/html5.vim'
 Bundle 'haproxy'
+Bundle 'wting/rust.vim'
 Bundle 'ruby.vim'
 "Bundle 'skwp/vim-ruby-conque'
 Bundle 'slim-template/vim-slim'
@@ -162,6 +163,7 @@ set backspace=2
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
+nnoremap <space> za
 
 "ENABLE OMNICOMPLETE
 set ofu=syntaxcomplete#Complete
@@ -171,7 +173,7 @@ set completeopt=menuone,longest,preview
 set wildchar=<TAB> " Character for CLI expansion (TAB-completion).
 set wildmode=longest:full
 set wildmenu "better command line completion in vim
-set wildignore+=.swf,*.pdf,*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js,smarty,vendor,node_libraries,node_modules,node_modules.git,.hg,.svn,.sass-cache,log,tmp,build,**/ckeditor/**,**/ckfinder/**
+set wildignore+=.swf,*.pdf,*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js,smarty,node_libraries,node_modules,node_modules.git,.hg,.svn,.sass-cache,log,tmp,build,**/ckeditor/**,**/ckfinder/**
 
 " highlight end of line whitespace
 highlight BadWhitespace term=standout ctermbg=red guibg=red
@@ -256,7 +258,7 @@ nnoremap <leader>w :set list!<cr>
 
 " faster window resizing
 "if bufwinnr(1)
-  "map = <C-W>+
+	map = <C-W>+
   "map - <C-W>-
   "map _ <C-W><
   "map + <C-W>>
@@ -298,9 +300,10 @@ nnoremap <silent> <leader>i :set nolist!<CR>
 
 " autocomplete for file types
 autocmd BufNewFile,BufRead *.py compiler nose
-autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 colorcolumn=79
+autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 colorcolumn=79 expandtab
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete tabstop=8 expandtab shiftwidth=4 softtabstop=4 colorcolumn=79
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS noexpandtab shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 au BufNewFile,BufRead *.ejs set filetype=html
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
