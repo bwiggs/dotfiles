@@ -28,3 +28,4 @@ PATH="$HOME/.nodenv/bin:$PATH"
 nodenv rehash 2>/dev/null
 
 source ~/.aliases
+source ~/.functions
