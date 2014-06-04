@@ -9,7 +9,7 @@ indent_size = 2
 indent_style = space
 indent_size = 4
 
-i; Tab indentation (no size specified)
+; Tab indentation (no size specified)
 [*.js]
 indent_size = 2
-indent_style = tab
+indent_style = space

@@ -23,4 +23,8 @@ export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 export GOPATH=~/.go
 PATH=$PATH:~/.go/bin
 
+# nodeenv
+PATH="$HOME/.nodenv/bin:$PATH"
+nodenv rehash 2>/dev/null
+
 source ~/.aliases
