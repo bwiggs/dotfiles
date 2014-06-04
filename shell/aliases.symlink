@@ -51,3 +51,9 @@ function extract() {
 		echo "'$1' is not a valid file"
 	fi
 }
+
+function genpasswd() {
+	let passwordLength=${1:-48}
+	openssl rand -base64 $passwordLength | cut -c 1-$passwordLength
+}
+
