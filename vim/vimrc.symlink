@@ -41,6 +41,7 @@ Bundle 'endwise.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'neocomplcache'
 Bundle 'tristen/vim-sparkup'
+Bundle 'othree/javascript-libraries-syntax.vim'
 
 " Language Support
 Bundle "pangloss/vim-javascript"
@@ -58,6 +59,7 @@ Bundle 'muz/vim-gemfile'
 Bundle 'tclem/vim-arduino'
 Bundle "sudar/vim-arduino-syntax"
 "Bundle "marijnh/tern_for_vim"
+Plugin 'fatih/vim-go'
 
 " Colorschemes
 Bundle 'ScrollColors'
@@ -163,7 +165,7 @@ set backspace=2
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
-nnoremap <space> za
+"nnoremap <space> za
 
 "ENABLE OMNICOMPLETE
 set ofu=syntaxcomplete#Complete
@@ -312,6 +314,12 @@ autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType php set tabstop=4 shiftwidth=4 noexpandtab
 autocmd BufRead,BufNewFile haproxy* set ft=haproxy
 
+" go leader mappings
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+
 " Hardcore mode plugin!
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
@@ -344,15 +352,15 @@ let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:functi
 let g:pep8_map='<leader>8'
 
 " Show syntax highlighting groups for word under cursor
-"nmap <C-S-P> :call <SID>SynStack()<CR>
-"function! <SID>SynStack()
-"  if !exists("*synstack")
-"    return
-"  endif
-"  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-"endfunc
+nmap <C-S-R> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+ if !exists("*synstack")
+	 return
+ endif
+ echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
-" highlight all hex colors with value
+"highlight all hex colors with value
 if exists('*HexHighlight()')
   nmap <leader>c :call HexHighlight()<Return>
 endif

@@ -72,3 +72,7 @@ function genpasswd() {
 	let passwordLength=${1:-48}
 	openssl rand -base64 $passwordLength | cut -c 1-$passwordLength
 }
+
+function speedtest() {
+	wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip	
+}

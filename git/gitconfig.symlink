@@ -30,6 +30,7 @@
   untracked = yellow
 
 [alias]
+  ci = commit
   co = checkout
   st = status
   branches = branch -a
@@ -37,9 +38,11 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
   whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	standup = !git log --author=\"`git config user.name`\" --before={`date "+%Y-%m-01"`} --after={`date -v-1m "+%Y-%m-01"`} --pretty=format:\"%cd  %h  %s\" --date=short
   
 [branch]
 	autosetupmerge = true
+	autosetuprebase = always
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
