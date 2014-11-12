@@ -34,7 +34,12 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'prompt' \
-	'node'
+	'node' \
+	'homebrew' \
+	'osx' \
+	'syntax-highlighting' \
+	'history-substring-search' \
+	'prompt'
 
 #
 # Editor

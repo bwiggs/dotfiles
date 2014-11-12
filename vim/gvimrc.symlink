@@ -1,4 +1,5 @@
 set guifont=Droid\ Sans\ Mono\ for\ Powerline:h16
+"set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h18
 "set guifont=Menlo\ for\ Powerline:h14
 
 " Fullscreen

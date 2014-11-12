@@ -8,10 +8,11 @@ alias g="git"
 alias evimrc="vim ~/.vimrc"
 alias egvimrc="vim ~/.gvimrc"
 alias sshconf="vim ~/.ssh/config"
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+#alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
+alias cdg="cd ~/go"
 
 # launch the iphone simulator
 # wish I had this for android also
@@ -23,14 +24,18 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 
 # Network stuff
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-#alias localip="ipconfig getifaddr en1"
+alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias dnet="traceroute 8.8.8.8"
 alias openports="lsof -i -P | grep LISTEN"
+alias paths="echo $PATH | tr : '\n'"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
