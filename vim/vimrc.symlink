@@ -17,7 +17,7 @@ Plugin 'wikitopian/hardmode'
 
 "Plugin 'Shougo/unite.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'The-NERD-tree'
@@ -93,6 +93,7 @@ colorscheme default    " use this color scheme for terminals
 syntax on
 set background=dark        " adapt colors for background
 "set t_Co=256
+let g:airline_powerline_fonts = 1
 
 
 " macvim: shift aarow select
