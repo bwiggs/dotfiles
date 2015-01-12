@@ -9,6 +9,7 @@ alias evimrc="vim ~/.vimrc"
 alias egvimrc="vim ~/.gvimrc"
 alias sshconf="vim ~/.ssh/config"
 #alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+alias vssh="vagrant ssh"
 
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
@@ -52,3 +53,4 @@ alias beers="bundle exec rails server"
 alias bi="bundle install"
 alias rtl='tail -f log/development.log'
 
+alias gpg="gpg2"
