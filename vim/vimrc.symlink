@@ -58,7 +58,9 @@ Plugin 'beyondwords/vim-twig'
 Plugin 'muz/vim-gemfile'
 Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
-"Plugin 'marijnh/tern_for_vim'
+"Plugin "marijnh/tern_for_vim"
+Plugin 'fatih/vim-go'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Colorschemes
 Plugin 'w0ng/vim-hybrid'
