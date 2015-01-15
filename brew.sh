@@ -22,10 +22,27 @@ brew install watch
 brew install wget
 
 # Casks
-brew cask install chrome
-brew cask install chrome
-brew cask install chrome
-brew cask install chrome
-brew cask install chrome
-brew cask install chrome
+# global apps
+brew cask install --appdir="/Applications" dropbox
+
+# user apps
+#brew cask install boxer
+brew cask install cakebrew
+brew cask install chromecast
+brew cask install charles
+brew cask install color-oracle
+brew cask install firefox
+brew cask install google-chrome
+brew cask install google-hangouts # hangouts support plugins
+brew cask install iterm2
+brew cask install eclipse-ide
+brew cask install macvim
+brew cask install opera
+brew cask install sketchup
+brew cask install sourcetree
+brew cask install spotify
+brew cask install spotify-notifications
+brew cask install vagrant
+
+brew cleanup --force
 
