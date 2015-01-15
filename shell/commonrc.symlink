@@ -28,5 +28,8 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 PATH="$HOME/.nodenv/bin:$PATH"
 nodenv rehash 2>/dev/null
 
+# android-sdks (from brew install android-sdk)
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
 source ~/.aliases
 source ~/.functions
