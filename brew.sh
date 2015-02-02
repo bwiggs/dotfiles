@@ -7,6 +7,10 @@ echo -e "\nInstalling Formulas"
 # install brew cask
 brew install caskroom/cask/brew-cask
 
+brew tap homebrew/versions
+brew tap caskroom/versions
+brew tap caskroom/fonts
+
 # Formulas
 
 brew install avrdude
