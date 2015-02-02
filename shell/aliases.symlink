@@ -10,6 +10,7 @@ alias egvimrc="vim ~/.gvimrc"
 alias sshconf="vim ~/.ssh/config"
 #alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 alias vssh="vagrant ssh"
+alias gup="git smart-pull"
 
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
