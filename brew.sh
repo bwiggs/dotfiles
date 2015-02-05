@@ -9,12 +9,16 @@ brew install caskroom/cask/brew-cask
 
 brew tap homebrew/versions
 
+# for joe (gitignore tool) - http://karan.github.io/joe/
+brew tap karan/karan 
+
 # Formulas
 
 brew install avrdude
 brew install htop-osx
 brew install httpie
 brew install imagemagick
+brew install gitignore # http://karan.github.io/joe/
 brew install ncdu
 brew install nmap
 brew install socat
@@ -44,6 +48,7 @@ brew cask install color-oracle
 brew cask install dash
 brew cask install fantastical
 brew cask install firefox
+brew cask install genymotion
 brew cask install google-chrome --appdir="/Applications"
 brew cask install google-hangouts # hangouts support plugins
 brew cask install gpgtools
