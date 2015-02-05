@@ -15,6 +15,7 @@ alias gup="git smart-pull"
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
 alias cdg="cd ~/go"
+alias cdgp="cd ~/go/src/github.com/bawigga"
 
 # launch the iphone simulator
 # wish I had this for android also
@@ -53,5 +54,9 @@ alias be="bundle exec "
 alias beers="bundle exec rails server"
 alias bi="bundle install"
 alias rtl='tail -f log/development.log'
+
+# Go Aliases
+alias gob="go build"
+alias got="go test"
 
 alias gpg="gpg2"

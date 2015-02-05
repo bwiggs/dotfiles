@@ -23,6 +23,9 @@ export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+# GVM Config - replaces the above stuff
+#[[ -s "/Users/brianwigginton/.gvm/scripts/gvm" ]] && source "/Users/brianwigginton/.gvm/scripts/gvm"
+
 
 # nodeenv
 PATH="$HOME/.nodenv/bin:$PATH"
@@ -30,6 +33,10 @@ nodenv rehash 2>/dev/null
 
 # android-sdks (from brew install android-sdk)
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+#Note that this last variable allows you to for example run Android Studio with Java 7 on OSX (which normally picks Java 6 from the version specified in Info.plist):
+# http://tools.android.com/recent/androidstudio1rc3_releasecandidate3released
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk
 
 source ~/.aliases
 source ~/.functions
