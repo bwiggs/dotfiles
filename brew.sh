@@ -19,6 +19,7 @@ brew install htop-osx
 brew install httpie
 brew install imagemagick
 brew install gitignore # http://karan.github.io/joe/
+brew install jsdoc3
 brew install ncdu
 brew install nmap
 brew install socat
@@ -46,6 +47,7 @@ brew cask install chromecast
 brew cask install charles
 brew cask install color-oracle
 brew cask install dash
+brew cask install dnscrypt
 brew cask install fantastical
 brew cask install firefox
 brew cask install genymotion
