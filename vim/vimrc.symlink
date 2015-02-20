@@ -1,3 +1,4 @@
+set shell=/bin/bash
 set nocompatible
 filetype off
 
@@ -252,14 +253,14 @@ nmap <leader>a <Esc>:Ag!
 "nnoremap <leader>[ <i{<CR>
 
 " toogle line number type
-function! g:ToggleNuMode()
-  if(&rnu == 1)
-    set nu
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
   else
-    set rnu
+    set relativenumber
   endif
 endfunc
-nnoremap <leader>l :call g:ToggleNuMode()<cr>
+nnoremap <leader>l :call NumberToggle()<cr>
 
 nnoremap <leader>w :set list!<cr>
 
