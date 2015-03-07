@@ -9,8 +9,9 @@ if [ -d "${RBENV_ROOT}" ]; then
 	eval "$(rbenv init -)"
 fi
 
-# Python - pythonbrew
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc" ]
+# Python - pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYENV_ROOT=/usr/local/opt/pyenv
 
 # Python/HomeBrew - brew-pip support
 export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
