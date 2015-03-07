@@ -22,6 +22,7 @@ brew install gitignore # http://karan.github.io/joe/
 brew install jsdoc3
 brew install ncdu
 brew install nmap
+brew install pyenv
 brew install socat
 brew install the_silver_searcher 
 brew install vim
@@ -54,6 +55,7 @@ brew cask install genymotion
 brew cask install google-chrome --appdir="/Applications"
 brew cask install google-hangouts # hangouts support plugins
 brew cask install gpgtools
+brew cask install hex-fiend
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install eclipse-ide
