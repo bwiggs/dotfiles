@@ -11,4 +11,4 @@ macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 set guioptions-=T
 set transparency=0
 
-colorscheme hybrid
+colorscheme base16-ocean
