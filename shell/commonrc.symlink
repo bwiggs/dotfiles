@@ -1,3 +1,5 @@
+. `brew --prefix`/etc/profile.d/z.sh
+
 # Ruby - RVM
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 #
@@ -11,7 +13,7 @@ fi
 
 # Python - pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-export PYENV_ROOT=/usr/local/opt/pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
 
 # Python/HomeBrew - brew-pip support
 export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
