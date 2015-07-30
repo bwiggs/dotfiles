@@ -1,8 +1,9 @@
 #!/bin/bash
 
-alias v="vim"
-alias gv="mvim"
-alias g="git"
+alias paths="echo $PATH | tr : '\n'"
+
+# grep alias for something
+alias sal="alias | grep"
 
 # commonn quick configs
 alias evimrc="vim ~/.vimrc"
@@ -33,7 +34,6 @@ alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias dnet="traceroute 8.8.8.8"
 alias openports="lsof -i -P | grep LISTEN"
-alias paths="echo $PATH | tr : '\n'"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
