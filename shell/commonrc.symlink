@@ -16,7 +16,7 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/var/pyenv
 
 # Python/HomeBrew - brew-pip support
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
+#export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 
 # Python - virtualenv
 #export WORKON_HOME=~/.virtualenvs

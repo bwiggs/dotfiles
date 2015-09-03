@@ -24,7 +24,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-fugitive' " git support
 Plugin 'tpope/vim-surround'
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Keithbsmiley/investigate.vim' " documentation lookup
 
@@ -55,6 +55,7 @@ Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'fatih/vim-go'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'peterhoeg/vim-qml'
 
 " Colorschemes
 Plugin 'vim-scripts/ScrollColors'
