@@ -8,6 +8,7 @@ echo -e "\nInstalling Formulas"
 brew install caskroom/cask/brew-cask
 
 brew tap homebrew/versions
+brew tap homebrew/binary
 
 # for joe (gitignore tool) - http://karan.github.io/joe/
 brew tap karan/karan 
