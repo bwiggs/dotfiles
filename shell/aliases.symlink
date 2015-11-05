@@ -34,6 +34,7 @@ alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias dnet="traceroute 8.8.8.8"
 alias openports="lsof -i -P | grep LISTEN"
+alias eth="ifconfig en0"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -41,6 +42,10 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+
+# schpelling
+
+alias mc="mv"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
@@ -64,3 +69,9 @@ alias got="go test"
 alias gor="go run"
 
 alias gpg="gpg2"
+
+# brew / cask
+alias caskn="cask info"
+alias brewn="brew info"
+alias caskz="cask zap"
+alias brewz="brew zap"
