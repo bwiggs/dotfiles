@@ -4,7 +4,7 @@
 
 [core]
   editor = /usr/bin/vim
-	excludesfile = /Users/brianwigginton/.gitignore_global
+	excludesfile = /Users/bwigginton/.gitignore_global
 	ignorecase = false
 
 [color]
@@ -65,4 +65,8 @@
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
 	required = true

@@ -104,6 +104,6 @@ fi
 # disable autocorrect cuz it's annoying!
 unsetopt correct_all
 
-source ~/.commonrc
-
-source ~/.local_profile
+# these should be in zshrc
+#source ~/.commonrc
+#source ~/.local_profile

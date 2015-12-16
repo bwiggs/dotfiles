@@ -23,12 +23,9 @@ export PYENV_ROOT=/usr/local/var/pyenv
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # Go
-export GOPATH=~/go
+export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-# GVM Config - replaces the above stuff
-#[[ -s "/Users/brianwigginton/.gvm/scripts/gvm" ]] && source "/Users/brianwigginton/.gvm/scripts/gvm"
-
 
 # nodeenv
 PATH="$HOME/.nodenv/bin:$PATH"
