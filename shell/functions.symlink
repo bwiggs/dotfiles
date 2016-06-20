@@ -5,7 +5,7 @@ function md() {
 
 # find shorthand
 function f() {
-	find . -name "$1"
+	find . -type f -iname "*$1*"
 }
 
 # lets toss an image onto my server and pbcopy that bitch.
