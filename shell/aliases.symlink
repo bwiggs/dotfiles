@@ -1,6 +1,7 @@
 #!/bin/bash
 
 alias l="ls -lh"
+alias rm="safe-rm"
 
 alias paths="echo $PATH | tr : '\n'"
 
@@ -58,6 +59,9 @@ alias mc="mv"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
+
+# Docker
+alias dm="docker-machine"
 
 # Node Stuff
 alias nv="nodenv"
