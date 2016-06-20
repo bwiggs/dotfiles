@@ -26,6 +26,7 @@ export PYENV_ROOT=/usr/local/var/pyenv
 export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GO15VENDOREXPERIMENT=1
 
 # nodeenv
 PATH="$HOME/.nodenv/bin:$PATH"
