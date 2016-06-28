@@ -24,7 +24,7 @@ alias vpro="vagrant provision"
 # cd
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
-alias cdg="cd ~/go"
+alias cdg="cd $GOPATH"
 alias cdgp="cd ~/go/src/github.com/bawigga"
 alias cdnva="~/Library/Application\ Support/nvALT"
 
