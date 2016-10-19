@@ -39,5 +39,8 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 # http://tools.android.com/recent/androidstudio1rc3_releasecandidate3released
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk
 
+# Calibre PATHS
+export PATH=$PATH:/opt/homebrew-cask/Caskroom/calibre/latest/calibre.app/Contents/MacOS
+
 source ~/.aliases
 source ~/.functions
