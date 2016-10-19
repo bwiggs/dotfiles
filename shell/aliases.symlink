@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# General Aliases
+# -----------------------------------------------------------------------------
 alias l="ls -lh"
 alias rm="safe-rm"
 
@@ -8,82 +10,96 @@ alias paths="echo $PATH | tr : '\n'"
 # grep alias for something
 alias sal="alias | grep"
 
-# common quick configs
-alias evimrc="vim ~/.vimrc"
-alias egvimrc="vim ~/.gvimrc"
-alias sshconf="vim ~/.ssh/config"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias gup="git smart-pull"
-alias tailf="tail -f"
-alias wtfmds="sudo fs_usage | grep mds"
-
-# Vagrant
-alias vssh="vagrant ssh"
-alias vpro="vagrant provision"
+alias mc="mv"
+alias galias="alias | grep"
+alias dm="docker-machine"
 
 # cd
+# -----------------------------------------------------------------------------
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
 alias cdg="cd $GOPATH"
 alias cdgp="cd ~/go/src/github.com/bawigga"
 alias cdnva="~/Library/Application\ Support/nvALT"
 
-# launch the iphone simulator
-# wish I had this for android also
-alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+# common quick configs
+alias evimrc="vim ~/.vimrc"
+alias egvimrc="vim ~/.gvimrc"
+alias sshconf="vim ~/.ssh/config"
 
-# Cat with syntax highlighting!
-# be sure to sudo easy_install Pygments
-alias c='pygmentize -O style=native -f console256 -g'
+# tools
+# -----------------------------------------------------------------------------
+alias tailf="tail -f"
+alias wtfmds="sudo fs_usage | grep mds"
 
 # Network stuff
+# -----------------------------------------------------------------------------
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias dnet="traceroute 8.8.8.8"
 alias openports="lsof -i -P | grep LISTEN"
 alias eth="ifconfig en0"
+alias routes="netstat -nr"
+
+# this will ring a bell if the host responds, great for diagnosing networking errors from the other room. Turn the speakers up!
+alias aping="ping -a 8.8.8.8" 
+
+# Mac Shortcuts
+# -----------------------------------------------------------------------------
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
-# schpelling
-
-alias mc="mv"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
 
-# Docker
-alias dm="docker-machine"
+# Development
+# -----------------------------------------------------------------------------
 
-# Node Stuff
+alias gup="git smart-pull"
+
+# Encryption
+alias gpg="gpg2"
+
+# iPhone simulator (wish I had this for android)
+alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
+# Node
 alias nv="nodenv"
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
-# Ruby Stuff
+# Ruby
 alias be="bundle exec "
 alias beers="bundle exec rails server"
 alias bi="bundle install"
 alias rtl='tail -f log/development.log'
 
-# Go Aliases
+# GoLang
 alias gob="go build"
 alias gom="go build && ./main"
+alias gorm="go run main.go"
 alias got="go test"
 alias gor="go run"
 alias gog="go get"
-
-alias gpg="gpg2"
 
 # brew / cask
 alias caskn="cask info"
 alias brewn="brew info"
 alias caskz="cask zap"
 alias brewz="brew zap"
+
+# Vagrant
+alias vssh="vagrant ssh"
+alias vpro="vagrant provision"
+
+# Cat with syntax highlighting!
+# be sure to sudo easy_install Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
+
