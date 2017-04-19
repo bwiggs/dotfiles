@@ -21,6 +21,7 @@ alias cdp="cd ~/Projects"
 alias cdg="cd $GOPATH"
 alias cdgp="cd ~/go/src/github.com/bawigga"
 alias cdnva="~/Library/Application\ Support/nvALT"
+alias ibooks="cd ~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books"
 
 # common quick configs
 alias evimrc="vim ~/.vimrc"
@@ -90,10 +91,15 @@ alias gor="go run"
 alias gog="go get"
 
 # brew / cask
+alias cask="brew cask"
+alias brews="brew search"
+alias casks="cask search"
 alias caskn="cask info"
 alias brewn="brew info"
 alias caskz="cask zap"
 alias brewz="brew zap"
+alias caski="cask install"
+alias brewi="brew install"
 
 # Vagrant
 alias vssh="vagrant ssh"
