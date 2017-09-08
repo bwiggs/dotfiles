@@ -1,6 +1,10 @@
 ; top-most EditorConfig file
 root = true
 
+[*.css]
+indent_style = space
+indent_size = 2
+
 [*.rb]
 indent_style = space
 indent_size = 2

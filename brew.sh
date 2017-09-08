@@ -6,6 +6,8 @@ echo -e "\nInstalling Formulas"
 
 brew tap homebrew/versions
 brew tap homebrew/binary
+brew tap domt4/autoupdate
+brew tap go-swagger/go-swagger
 
 # for joe (gitignore tool) - http://karan.github.io/joe/
 brew tap karan/karan
@@ -17,6 +19,7 @@ brew install htop-osx
 brew install httpie
 brew install imagemagick
 brew install gitignore # http://karan.github.io/joe/
+brew install jq
 brew install jsdoc3
 brew install ncdu
 brew install nmap
