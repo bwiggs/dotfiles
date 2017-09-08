@@ -92,3 +92,6 @@ function demo() {
 	echo "demo port ${1} on http://demo.bwiggs.com"
 	ssh -NR 3000:localhost:$1 bwiggs.com
 }
+function isodate() {
+	date +%Y-%m-%dT%H:%M:%S%z
+}

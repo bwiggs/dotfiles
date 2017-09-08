@@ -1,5 +1,11 @@
-. `brew --prefix`/etc/profile.d/z.sh
+#!/usr/bin/env zsh
+env_file="$HOME/.env"
+if [[ -f $env_file ]]; then
+	source $env_file
+fi
+source $env_file
 
+. `brew --prefix`/etc/profile.d/z.sh
 
 # rbenv
 export RBENV_ROOT="${HOME}/.rbenv"

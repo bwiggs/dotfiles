@@ -103,7 +103,3 @@ fi
 
 # disable autocorrect cuz it's annoying!
 unsetopt correct_all
-
-# these should be in zshrc
-#source ~/.commonrc
-#source ~/.local_profile
