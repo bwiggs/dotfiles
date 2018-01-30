@@ -19,7 +19,7 @@ alias dm="docker-machine"
 alias cdd="cd ~/dotfiles"
 alias cdp="cd ~/Projects"
 alias cdg="cd $GOPATH"
-alias cdgp="cd ~/go/src/github.com/bawigga"
+alias cdgp="cd ~/go/src/github.com/bwiggs"
 alias cdnva="~/Library/Application\ Support/nvALT"
 alias ibooks="cd ~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books"
 

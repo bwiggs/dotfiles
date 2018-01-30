@@ -60,6 +60,7 @@ Plugin 'sudar/vim-arduino-syntax'
 Plugin 'fatih/vim-go'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'peterhoeg/vim-qml'
+Plugin 'cespare/vim-toml'
 
 " Colorschemes
 Plugin 'vim-scripts/ScrollColors'
