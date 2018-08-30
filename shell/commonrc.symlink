@@ -19,8 +19,12 @@ eval "$(goenv init -)"
 source ~/.aliases
 source ~/.functions
 
-env_file="$HOME/.localrc"
+env_file="$HOME/.env"
 if [[ -f $env_file ]]; then
 	source $env_file
 fi
-source $env_file
+
+localrc_file="$HOME/.localrc"
+if [[ -f $localrc_file ]]; then
+	source $localrc_file
+fi

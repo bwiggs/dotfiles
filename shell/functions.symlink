@@ -95,3 +95,15 @@ function demo() {
 function dateiso() {
 	date +%Y-%m-%dT%H:%M:%S%z
 }
+
+function jwt-gen() {
+	local header=$(echo -n '{"alg":"HS256","typ":"JWT"}' | base64)
+	local payload=$(echo -n '{"iss": "jwt-gen", "iat": 1531713720, "exp": 1910404920, "aud": "www.example.com", "sub": "bwigginton" }' | base64 | sed s/\+/-/ | sed -E s/=+$//)
+	local digest=$(echo -n "${header}.${payload}" | openssl dgst -sha256 -hmac abc123 -binary | openssl base64 -e -A | sed s/\+/-/ | sed -E s/=+$//)
+	echo -n "${header}.${payload}.${digest}"
+}
+#
+# fh - repeat history
+fh() {
+	eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
