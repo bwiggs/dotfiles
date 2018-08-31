@@ -36,6 +36,7 @@ alias wtfmds="sudo fs_usage | grep mds"
 #alias todo="git grep -EI \"TODO|FIXME\""
 alias todo="leasot . -S --ignore \"vendor/**\" --tags \"HACK,NOTE,XXX\""
 alias cat="bat"
+alias catnc="awk '!/^ *#/ && NF'"
 alias ag="rg"
 
 # Network stuff
