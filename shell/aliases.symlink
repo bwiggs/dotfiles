@@ -4,6 +4,7 @@
 # -----------------------------------------------------------------------------
 alias l="ls -lh"
 alias rm="safe-rm"
+alias s="ssh bwiggs.com"
 
 alias paths="echo $PATH | tr : '\n'"
 
@@ -13,7 +14,6 @@ alias sal="alias | grep"
 alias mc="mv"
 alias galias="alias | grep"
 alias dm="docker-machine"
-alias envs="env | sort"
 
 # cd
 # -----------------------------------------------------------------------------
@@ -33,11 +33,6 @@ alias sshconf="vim ~/.ssh/config"
 # -----------------------------------------------------------------------------
 alias tailf="tail -f"
 alias wtfmds="sudo fs_usage | grep mds"
-#alias todo="git grep -EI \"TODO|FIXME\""
-alias todo="leasot . -S --ignore \"vendor/**\" --tags \"HACK,NOTE,XXX\""
-alias cat="bat"
-alias catnc="awk '!/^ *#/ && NF'"
-alias ag="rg"
 
 # Network stuff
 # -----------------------------------------------------------------------------
@@ -48,7 +43,6 @@ alias dnet="traceroute 8.8.8.8"
 alias openports="lsof -i -P | grep LISTEN"
 alias eth="ifconfig en0"
 alias routes="netstat -nr"
-alias ping="prettyping"
 
 # this will ring a bell if the host responds, great for diagnosing networking errors from the other room. Turn the speakers up!
 alias aping="ping -a 8.8.8.8" 
@@ -94,7 +88,6 @@ alias gob="go build"
 alias gom="go build && ./main"
 alias gorm="go run main.go"
 alias got="go test"
-alias gto="go test"
 alias gor="go run"
 alias gog="go get"
 
@@ -106,8 +99,9 @@ alias caskn="cask info"
 alias brewn="brew info"
 alias caskz="cask zap"
 alias brewz="brew zap"
+alias brewr="brew remove"
 alias caski="cask install"
-alias caskr="cask reinstall"
+alias caskre="cask reinstall"
 alias brewi="brew install"
 
 # Vagrant

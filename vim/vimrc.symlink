@@ -17,8 +17,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " For the insane!
-Plugin 'wikitopian/hardmode'
-
+Plugin 'takac/vim-hardtime'
+let g:hardtime_default_on = 1
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
@@ -316,6 +317,7 @@ au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
+let g:go_fmt_command = "goimports"
 
 " Hardcore mode plugin!
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
