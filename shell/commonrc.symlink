@@ -1,9 +1,4 @@
 #!/usr/bin/env zsh
-env_file="$HOME/.env"
-if [[ -f $env_file ]]; then
-	source $env_file
-fi
-source $env_file
 
 . `brew --prefix`/etc/profile.d/z.sh
 
@@ -15,10 +10,23 @@ if [ -d "${RBENV_ROOT}" ]; then
 fi
 
 # Go
-export GOPATH="$HOME/go"
-export PATH=$GOPATH/bin:$PATH
-eval "$(goenv init -)"
-#export PATH=/usr/local/opt/go/libexec/bin:$PATH
+export GO111MODULE="auto"
+#export GOENV_DEBUG=true
 
+export GOROOT="/usr/local/Cellar/go/1.12.1/libexec"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+
+# load in default helpers
 source ~/.aliases
 source ~/.functions
+
+# allow overriding with localrc
+localrc_file="$HOME/.localrc"
+if [[ -f $localrc_file ]]; then
+	source $localrc_file
+fi

@@ -108,3 +108,6 @@ export PATH=~/.gem/ruby/1.8/bin:$PATH:/opt/local/bin:/opt/local/sbin
 # source ~/dotfiles/python-dev-env.sh
 
 export HISTFILESIZE=3000
+
+eval "$(direnv hook bash)"
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
