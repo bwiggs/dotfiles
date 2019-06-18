@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-. `brew --prefix`/etc/profile.d/z.sh
+eval "$(direnv hook zsh)"
+
 
 # rbenv
 export RBENV_ROOT="${HOME}/.rbenv"
