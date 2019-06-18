@@ -8,6 +8,7 @@ alias rm="safe-rm"
 alias s="ssh bwiggs.com"
 alias paths="echo $PATH | tr : '\n'"
 alias vim="nvim"
+alias envs="env | sort"
 
 # grep alias for something
 alias sal="alias | grep"
