@@ -18,7 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " For the insane!
 Plugin 'takac/vim-hardtime'
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'

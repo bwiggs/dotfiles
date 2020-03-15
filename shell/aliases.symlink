@@ -3,18 +3,15 @@
 # General Aliases
 # -----------------------------------------------------------------------------
 alias l="ls -lh"
-alias lart="ls -lart"
 alias rm="safe-rm"
 alias s="ssh bwiggs.com"
+
 alias paths="echo $PATH | tr : '\n'"
-alias vim="nvim"
-alias envs="env | sort"
 
 # grep alias for something
 alias sal="alias | grep"
 
 alias mc="mv"
-alias maek="make"
 alias galias="alias | grep"
 alias dm="docker-machine"
 
@@ -26,28 +23,16 @@ alias cdg="cd $GOPATH"
 alias cdgp="cd ~/go/src/github.com/bwiggs"
 alias cdnva="~/Library/Application\ Support/nvALT"
 alias ibooks="cd ~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books"
-alias da="direnv allow"
-alias desk="cd ~/Desktop"
 
 # common quick configs
 alias evimrc="vim ~/.vimrc"
 alias egvimrc="vim ~/.gvimrc"
 alias sshconf="vim ~/.ssh/config"
-alias ehosts="sudo vim /etc/hosts"
 
 # tools
 # -----------------------------------------------------------------------------
 alias tailf="tail -f"
 alias wtfmds="sudo fs_usage | grep mds"
-#alias todo="git grep -EI \"TODO|FIXME\""
-alias todo="leasot . -S --ignore \"vendor/**\" --tags \"HACK,NOTE,XXX\""
-alias catnc="awk '!/^ *#/ && NF'"
-alias ag="rg"
-
-# docker/k8s
-# -----------------------------------------------------------------------------
-alias dk="docker"
-alias kc="kubectl"
 
 # Network stuff
 # -----------------------------------------------------------------------------
@@ -55,8 +40,7 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias dnet="traceroute 8.8.8.8"
-alias listening="lsof -n -i -P | grep LISTEN"
-alias ports="listening"
+alias openports="lsof -i -P | grep LISTEN"
 alias eth="ifconfig en0"
 alias routes="netstat -nr"
 
@@ -110,7 +94,7 @@ alias gog="go get"
 # brew / cask
 alias cask="brew cask"
 alias brews="brew search"
-alias casks="brew search"
+alias casks="brews"
 alias caskn="cask info"
 alias brewn="brew info"
 alias caskz="cask zap"
